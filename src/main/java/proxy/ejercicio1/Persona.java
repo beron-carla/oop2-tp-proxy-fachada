@@ -17,6 +17,10 @@ public class Persona {
         return telefonos.toArray(new Telefono[telefonos.size()]);
     }
 
+    public int numberssize() {
+        return telefonos.size();
+    }
+
     public String nombre() {
         return nombre;
     }
