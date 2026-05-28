@@ -1,4 +1,4 @@
-package facade;
+package facade.ejercicio4;
 
 import java.util.Collection;
 import java.util.Iterator;

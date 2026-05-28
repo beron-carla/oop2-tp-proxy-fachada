@@ -1,4 +1,4 @@
-package facade;
+package facade.ejercicio4;
 
 public class Main {
     public static void main(String args[]) {

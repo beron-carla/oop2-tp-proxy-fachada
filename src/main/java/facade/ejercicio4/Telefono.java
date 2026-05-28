@@ -1,4 +1,4 @@
-package facade;
+package facade.ejercicio4;
 
 public class Telefono {
     private String numero;

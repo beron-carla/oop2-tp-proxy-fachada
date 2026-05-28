@@ -5,7 +5,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class PersonaDao {
-    //no cierra la conexión
+
     private Connection obtenerConexion() {
         try {
             String url = "jdbc:mysql://localhost:3307/biblioteca";
@@ -29,9 +29,8 @@ public class PersonaDao {
                 nombrePersona = result.getString(1);
                 Set<Telefono> telefonos = new ProxySet(id, this);
                 return new Persona(id, nombrePersona, telefonos);
-
-//                telefonos.add(new Telefono(result.getString(2)));
             }
+            conn.close();
             return null;
         } catch (SQLException e) {
             throw new RuntimeException(e);
@@ -50,6 +49,7 @@ public class PersonaDao {
             while (result.next()) {
                 telefonos.add(new Telefono(result.getString(1)));
             }
+            conn.close();
             return telefonos;
 
         } catch (SQLException e) {
