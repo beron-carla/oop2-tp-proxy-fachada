@@ -5,6 +5,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class PersonaDao {
+    //no cierra la conexión
     private Connection obtenerConexion() {
         try {
             String url = "jdbc:mysql://localhost:3307/biblioteca";
@@ -22,7 +23,6 @@ public class PersonaDao {
              PreparedStatement statement = conn.prepareStatement(sql);) {
             statement.setInt(1, id);
             ResultSet result = statement.executeQuery();
-
 
             String nombrePersona = null;
             while (result.next()) {
