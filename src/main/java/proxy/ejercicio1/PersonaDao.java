@@ -10,7 +10,7 @@ public class PersonaDao {
         try {
             String url = "jdbc:mysql://localhost:3307/biblioteca";
             String usuario = "root";
-            String password = "basededatos1*";
+            String password = "";
             return DriverManager.getConnection(url, usuario, password);
         } catch (SQLException e) {
             throw new RuntimeException(e);
